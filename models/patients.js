@@ -1,6 +1,6 @@
 module.exports = function(sequelize, Sequelize) {
 
-	var Patient = sequelize.define('Patient', {
+	var Patients = sequelize.define('Patients', {
 		id: { autoIncrement: true, primaryKey: true, type: Sequelize.INTEGER},
 		firstname: { type:Sequelize.STRING,notEmpty: true},
 		lastname: { type:Sequelize.STRING,notEmpty: true},
@@ -11,11 +11,11 @@ module.exports = function(sequelize, Sequelize) {
         state: {type:Sequelize.STRING,notEmpty: true},
         zipcode: {type:Sequelize.STRING,notEmpty: true},
         social: {type:Sequelize.STRING,notEmpty: true},
-        gender: {type:Sequelize.STRING.notEmpty: true},
-        visit: {type:Sequelize.TEXT.notEmpty: true},
+        gender: {type:Sequelize.STRING,notEmpty: true},
+        visit: {type:Sequelize.TEXT,notEmpty: true}
 
 });
 
-	return Patient;
+	return Patients;
 
 }
